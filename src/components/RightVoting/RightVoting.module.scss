@@ -1,0 +1,146 @@
+@import '../../styles/libs/variables';
+
+.root {
+  margin-top: 30px;
+  width: 680px;
+  height: 852px;
+}
+
+.main {
+  margin-top: 10px;
+  width: 680px;
+  height: 782px;
+  border-radius: 20px;
+  background-color: $color-white;
+}
+
+.topButtons {
+  display: flex;
+
+  .arrowLeft {
+    margin: 20px 10px 20px 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: $color-pink;
+  }
+
+  .buttonVoting {
+    margin-top: 20px;
+    padding-top: 3px;
+    width: 146px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: $color-lightRed;
+
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.mainBlock {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.likeButtonMenu {
+  position: absolute;
+  bottom: -40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+
+  width: 248px;
+  height: 85px;
+  padding: 3px;
+  border-radius: 12px;
+  background-color: $color-white;
+
+  .leftButton {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px 0 0 10px;
+    background-color: $color-green;
+  }
+
+  .middleButton {
+    width: 80px;
+    height: 80px;
+    background-color: $color-lightRed;
+  }
+
+  .rightButton {
+    width: 80px;
+    height: 80px;
+    border-radius: 0 10px 10px 0;
+    background-color: $color-orange;
+  }
+}
+
+.historySection {
+  width: 640px;
+  height: 270px;
+  margin: 52px auto 0;
+
+  .historyItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .historyItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 640px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: $color-background;
+
+    .time {
+      margin: 15px;
+      padding: 3px 10px;
+      background-color: $color-white;
+      border-radius: 5px;
+
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $color-dark;
+    }
+
+    .text {
+      position: relative;
+      left: -80px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $color-gray;
+
+      span {
+        font-weight: 500;
+        color: $color-dark;
+      }
+    }
+
+    .historyIcone {
+      width: 20px;
+      height: 17.3px;
+      margin: 20px;
+    }
+  }
+}
+
+img {
+  color: #ff868e;
+}

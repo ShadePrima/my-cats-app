@@ -1,0 +1,52 @@
+@import '../../styles/libs/variables';
+
+.root {
+  margin-top: 30px;
+  width: 680px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    width: 470px;
+    height: 60px;
+    padding: 15px 20px;
+    background-color: $color-white;
+    border-radius: 20px;
+
+    font-weight: 400px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.headerInput {
+  position: relative;
+  width: 470px;
+  height: 60px;
+}
+
+.buttonInput {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fbe0dc;
+
+  img {
+    padding: 10px;
+  }
+}
+
+.headerButton {
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: $color-white;
+}

@@ -9,6 +9,7 @@ import styles from './RightBreeds.module.scss';
 import arrowButtom from '../../assets/icons/arrow-gray-bottom.png';
 import sortTop from '../../assets/icons/ab-top.png';
 import sortBottom from '../../assets/icons/ab-bottom.png';
+import CatsFotoColection from '../CatsFotoColection/CatsFotoColection';
 
 const RightBreeds: React.FC = () => {
   return (
@@ -52,6 +53,8 @@ const RightBreeds: React.FC = () => {
             <img src={sortBottom} alt='Sort bottom' />
           </button>
         </section>
+
+        <CatsFotoColection />
       </main>
     </div>
   );

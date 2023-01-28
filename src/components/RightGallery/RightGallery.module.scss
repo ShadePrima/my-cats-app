@@ -13,3 +13,142 @@
   border-radius: 20px;
   background-color: $color-white;
 }
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.galleryTitle {
+  position: relative;
+  left: -148px;
+}
+
+.upload {
+  width: 143px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: $color-pink;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-lightRed;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+
+  img {
+    margin-right: 10px;
+  }
+}
+
+.filters {
+  width: 640px;
+  height: 156px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: $color-background;
+}
+
+.row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.filterItem {
+  width: 290px;
+  height: 58px;
+}
+
+.selected {
+  position: relative;
+  width: 290px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: $color-white;
+
+  select {
+    width: 290px;
+    height: 40px;
+    padding: 8px 10px;
+    border-radius: 10px;
+
+    appearance: none;
+
+    font-weight: 400;
+    font-size: 16px;
+    color: $color-gray;
+  }
+
+  option {
+    border-radius: 20px;
+    font-size: 20px;
+  }
+
+  img {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+  }
+}
+
+.filterItemLast {
+  width: 240px;
+  height: 58px;
+}
+
+.selectedLast {
+  position: relative;
+  width: 240px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: $color-white;
+
+  select {
+    width: 240px;
+    height: 40px;
+    padding: 8px 10px;
+    border-radius: 10px;
+
+    appearance: none;
+
+    font-weight: 400;
+    font-size: 16px;
+    color: $color-gray;
+  }
+
+  option {
+    border-radius: 20px;
+    font-size: 20px;
+  }
+
+  img {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+  }
+}
+
+.label {
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 18px;
+  color: $color-gray;
+  text-transform: uppercase;
+}
+
+.update {
+  position: relative;
+  top: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: $color-white;
+}

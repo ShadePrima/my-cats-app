@@ -24,7 +24,9 @@ const RightVoting: React.FC = () => {
       <main className={styles.main}>
         <div className={styles.topButtons}>
           <Link to='/'>
-            <ArrowLeft />
+            <div>
+              <ArrowLeft />
+            </div>
           </Link>
           <TitleSection name='Voting' />
         </div>

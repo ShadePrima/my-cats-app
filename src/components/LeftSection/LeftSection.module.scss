@@ -80,3 +80,14 @@
     color: $color-white;
   }
 }
+
+.active {
+  p {
+    margin-top: 1px;
+    text-align: center;
+    padding: 7px;
+    color: $color-white;
+    background-color: $color-lightRed;
+    border-radius: 10px;
+  }
+}

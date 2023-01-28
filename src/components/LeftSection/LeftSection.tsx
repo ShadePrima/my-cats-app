@@ -29,7 +29,7 @@ const LeftSection: React.FC = () => {
             <Link to='#'>
               <div className={styles.item}>
                 <img src={voting} alt='Voting' />
-                <div>
+                <div className={styles.active}>
                   <p>VOTING</p>
                 </div>
               </div>
@@ -48,7 +48,7 @@ const LeftSection: React.FC = () => {
             <Link to='#'>
               <div className={styles.item}>
                 <img src={breeds} alt='Breeds' />
-                <div>
+                <div className={styles.active}>
                   <p>BREEDS</p>
                 </div>
               </div>
@@ -67,7 +67,7 @@ const LeftSection: React.FC = () => {
             <Link to='#'>
               <div className={styles.item}>
                 <img src={gallery} alt='Gallery' />
-                <div>
+                <div className={styles.active}>
                   <p>GALLERY</p>
                 </div>
               </div>

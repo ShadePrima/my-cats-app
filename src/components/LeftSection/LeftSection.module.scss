@@ -58,7 +58,25 @@
   }
 
   p {
+    margin-top: 1px;
     text-align: center;
     padding: 7px;
+    color: $color-lightRed;
+  }
+}
+
+.item:hover {
+  div {
+    background-color: $color-pink;
+  }
+}
+
+.item:active {
+  div {
+    background-color: $color-lightRed;
+  }
+
+  p {
+    color: $color-white;
   }
 }

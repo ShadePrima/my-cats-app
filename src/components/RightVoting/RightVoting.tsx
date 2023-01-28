@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../Header/Header';
 
 import styles from './RightVoting.module.scss';
-import arrowLeft from '../../assets/icons/arrow-left.png';
+// import arrowLeft from '../../assets/icons/arrow-left.png';
 import blackCat from '../../assets/voting/blackCat.png';
 
 import likeWhite from '../../assets/icons/like.svg';
@@ -12,6 +12,9 @@ import dislikeWhite from '../../assets/icons/dislike.svg';
 import like from '../../assets/icons/like-green.png';
 import heart from '../../assets/icons/heart-red.png';
 import dislike from '../../assets/icons/dislike-green.png';
+import { Link } from 'react-router-dom';
+import ArrowLeft from '../buttons/ArrowLeft/ArrowLeft';
+import TitleSection from '../TitleSection/TitleSection';
 
 const RightVoting: React.FC = () => {
   return (
@@ -20,10 +23,10 @@ const RightVoting: React.FC = () => {
 
       <main className={styles.main}>
         <div className={styles.topButtons}>
-          <button className={styles.arrowLeft}>
-            <img src={arrowLeft} alt='Arrow Left' />
-          </button>
-          <button className={styles.buttonVoting}>Voting</button>
+          <Link to='/'>
+            <ArrowLeft />
+          </Link>
+          <TitleSection name='Voting' />
         </div>
 
         <div className={styles.mainBlock}>

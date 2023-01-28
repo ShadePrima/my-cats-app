@@ -2,6 +2,7 @@
 
 .root {
   margin-top: 30px;
+  margin-left: 80px;
   width: 680px;
   height: 852px;
 }
@@ -16,29 +17,6 @@
 
 .topButtons {
   display: flex;
-
-  .arrowLeft {
-    margin: 20px 10px 20px 20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: $color-pink;
-  }
-
-  .buttonVoting {
-    margin-top: 20px;
-    padding-top: 3px;
-    width: 146px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: $color-lightRed;
-
-    color: $color-white;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-  }
 }
 
 .mainBlock {

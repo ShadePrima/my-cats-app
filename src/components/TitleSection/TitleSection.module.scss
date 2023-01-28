@@ -1,0 +1,17 @@
+@import '../../styles/libs/variables';
+
+.root {
+  margin-top: 20px;
+  padding-top: 6px;
+  width: 143px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: $color-lightRed;
+
+  color: $color-white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}

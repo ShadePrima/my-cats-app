@@ -5,13 +5,18 @@ import logo from '../../assets/icons/logo.png';
 import voting from '../../assets/menu/voting.png';
 import breeds from '../../assets/menu/breeds.png';
 import gallery from '../../assets/menu/gallery.png';
+import { Link, useLocation } from 'react-router-dom';
 
 const LeftSection: React.FC = () => {
+  const location = useLocation();
+
   return (
     <div className={styles.root}>
-      <div className={styles.logo}>
-        <img src={logo} alt='logo-paw' />
-      </div>
+      <Link to='/'>
+        <div className={styles.logo}>
+          <img src={logo} alt='logo-paw' />
+        </div>
+      </Link>
 
       <h1>Hi guest!</h1>
 
@@ -20,26 +25,63 @@ const LeftSection: React.FC = () => {
       <div className={styles.menu}>
         <p className={styles.title}>Lets start using The Cat API</p>
         <div className={styles.items}>
-          <div className={styles.item}>
-            <img src={voting} alt='Voting' />
-            <div>
-              <p>VOTING</p>
-            </div>
-          </div>
-
-          <div className={styles.item}>
-            <img src={breeds} alt='Breeds' />
-            <div>
-              <p>BREEDS</p>
-            </div>
-          </div>
-
-          <div className={styles.item}>
-            <img src={gallery} alt='Gallery' />
-            <div>
-              <p>GALLERY</p>
-            </div>
-          </div>
+          {location.pathname === '/voting' ? (
+            <Link to='#'>
+              <div className={styles.item}>
+                <img src={voting} alt='Voting' />
+                <div>
+                  <p>VOTING</p>
+                </div>
+              </div>
+            </Link>
+          ) : (
+            <Link to='/voting'>
+              <div className={styles.item}>
+                <img src={voting} alt='Voting' />
+                <div>
+                  <p>VOTING</p>
+                </div>
+              </div>
+            </Link>
+          )}
+          {location.pathname === '/breeds' ? (
+            <Link to='#'>
+              <div className={styles.item}>
+                <img src={breeds} alt='Breeds' />
+                <div>
+                  <p>BREEDS</p>
+                </div>
+              </div>
+            </Link>
+          ) : (
+            <Link to='/breeds'>
+              <div className={styles.item}>
+                <img src={breeds} alt='Breeds' />
+                <div>
+                  <p>BREEDS</p>
+                </div>
+              </div>
+            </Link>
+          )}
+          {location.pathname === '/gallery' ? (
+            <Link to='#'>
+              <div className={styles.item}>
+                <img src={gallery} alt='Gallery' />
+                <div>
+                  <p>GALLERY</p>
+                </div>
+              </div>
+            </Link>
+          ) : (
+            <Link to='/gallery'>
+              <div className={styles.item}>
+                <img src={gallery} alt='Gallery' />
+                <div>
+                  <p>GALLERY</p>
+                </div>
+              </div>
+            </Link>
+          )}
         </div>
       </div>
     </div>

@@ -1,0 +1,15 @@
+@import '../../styles/libs/variables';
+
+.root {
+  margin-top: 30px;
+  margin-left: 80px;
+  width: 680px;
+}
+
+.main {
+  margin-top: 10px;
+  width: 680px;
+  height: 852px;
+  border-radius: 20px;
+  background-color: $color-white;
+}

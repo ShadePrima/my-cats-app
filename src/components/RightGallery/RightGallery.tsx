@@ -9,6 +9,7 @@ import styles from './RightGallery.module.scss';
 import upload from '../../assets/icons/upload.png';
 import arrowButtom from '../../assets/icons/arrow-gray-bottom.png';
 import update from '../../assets/icons/update.png';
+import CatsFotoColection from '../CatsFotoColection/CatsFotoColection';
 
 const RightGallery: React.FC = () => {
   return (
@@ -84,6 +85,10 @@ const RightGallery: React.FC = () => {
               <img src={update} alt='update' />
             </button>
           </div>
+        </section>
+
+        <section className={styles.foto}>
+          <CatsFotoColection />
         </section>
       </main>
     </div>

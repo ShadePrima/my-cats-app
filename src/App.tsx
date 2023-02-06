@@ -16,6 +16,8 @@ import './styles/main.scss';
 function App() {
   const dispatch = useDispatch();
   let keyBreed = useSelector((state: any) => state.oneBreed.keyBreed);
+  let limit = useSelector((state: any) => state.oneBreed.limit);
+  let order = useSelector((state: any) => state.oneBreed.order);
 
   if (!keyBreed) {
     keyBreed = 'abys';
@@ -31,12 +33,12 @@ function App() {
         'live_xbu04NfIXvRe0ID6A8WPyOAD0yE5YMvOKnPgLMeWqeQvBCUkKgzBf5xMcYDFxsRB';
 
       const result = await axios.get(
-        `https://api.thecatapi.com/v1/images/search?limit=5&breed_ids=${keyBreed}&api_key=${API_KEY}`
+        `https://api.thecatapi.com/v1/images/search?limit=${limit}&breed_ids=${keyBreed}&order=${order}&api_key=${API_KEY}`
       );
       dispatch(setDataBreed(result.data));
     };
     getOneBreed();
-  }, [keyBreed, dispatch]);
+  }, [keyBreed, dispatch, limit, order]);
 
   //get all breeds
   React.useEffect(() => {

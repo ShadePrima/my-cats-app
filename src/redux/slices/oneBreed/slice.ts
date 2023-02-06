@@ -1,13 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  config: {},
   data: [],
-  headers: {},
-  request: {},
-  status: '',
-  statusText: '',
   keyBreed: '',
+  limit: '',
+  order: '',
 };
 
 export const oneBreedSlice = createSlice({
@@ -20,9 +17,26 @@ export const oneBreedSlice = createSlice({
     setKeyBreed(state, action) {
       state.keyBreed = action.payload;
     },
+    setLimit(state, action) {
+      state.limit = action.payload;
+    },
+    setOrderAsc(state, action) {
+      state.order = action.payload;
+      console.log(state.order, 'order');
+    },
+    setOrderDesc(state, action) {
+      state.order = action.payload;
+      console.log(state.order, 'order');
+    },
   },
 });
 
-export const { setDataBreed, setKeyBreed } = oneBreedSlice.actions;
+export const {
+  setDataBreed,
+  setKeyBreed,
+  setLimit,
+  setOrderAsc,
+  setOrderDesc,
+} = oneBreedSlice.actions;
 
 export default oneBreedSlice.reducer;

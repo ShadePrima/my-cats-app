@@ -1,4 +1,6 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { Link } from 'react-router-dom';
 
 import ArrowLeft from '../buttons/ArrowLeft/ArrowLeft';
@@ -10,8 +12,26 @@ import arrowButtom from '../../assets/icons/arrow-gray-bottom.png';
 import sortTop from '../../assets/icons/ab-top.png';
 import sortBottom from '../../assets/icons/ab-bottom.png';
 import CatsFotoColection from '../CatsFotoColection/CatsFotoColection';
+import { setKeyBreed } from '../../redux/slices/oneBreed/slice';
 
 const RightBreeds: React.FC = () => {
+  const dispatch = useDispatch();
+  const data = useSelector((state: any) => state.breeds.data);
+
+  const [selectBreed, setSelectBreed] = React.useState<any>('');
+
+  const handleBreed = (event: any) => {
+    setSelectBreed(event);
+  };
+
+  React.useEffect(() => {
+    dispatch(setKeyBreed(String('beng')));
+
+    const result = data.filter((item: any) => item.name === selectBreed);
+    const keyBreed = result.map((key: any) => key.id);
+    dispatch(setKeyBreed(String(keyBreed)));
+  }, [selectBreed]);
+
   return (
     <div className={styles.root}>
       <Header />
@@ -23,14 +43,13 @@ const RightBreeds: React.FC = () => {
           <TitleSection name='Breeds' />
 
           <div className={styles.allBreeds}>
-            <select>
-              <option>All breeds</option>
-              <option>Abyssinian</option>
-              <option>Aegean</option>
-              <option>American Bobtail</option>
-              <option>American Curl</option>
-              <option>American Shorthair</option>
-              <option>American Wirehair</option>
+            <select
+              value={selectBreed}
+              onChange={(event) => handleBreed(event.target.value)}
+            >
+              {data.map((obj: any) => (
+                <option key={obj.id}>{obj.name}</option>
+              ))}
             </select>
             <img src={arrowButtom} alt='Arrow buttom' />
           </div>
@@ -53,8 +72,9 @@ const RightBreeds: React.FC = () => {
             <img src={sortBottom} alt='Sort bottom' />
           </button>
         </section>
-
-        <CatsFotoColection />
+        <div className={styles.fotoColection}>
+          <CatsFotoColection />
+        </div>
       </main>
     </div>
   );

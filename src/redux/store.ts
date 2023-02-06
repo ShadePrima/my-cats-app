@@ -1,7 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
+import breeds from './slices/breeds/slice';
+import oneBreed from './slices/oneBreed/slice';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    breeds,
+    oneBreed,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

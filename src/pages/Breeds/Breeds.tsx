@@ -3,7 +3,7 @@ import LeftSection from '../../components/LeftSection/LeftSection';
 import RightBreeds from '../../components/RightBreeds/RightBreeds';
 import styles from './Breeds.module.scss';
 
-const Breeds: React.FC = () => {
+const Breeds: React.FC = (breeds) => {
   return (
     <div className='container'>
       <div className={styles.root}>

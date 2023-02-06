@@ -2,31 +2,13 @@
 
 .root {
   width: 640px;
-  height: 746px;
+  height: 754px;
   margin: 0 auto;
   border-radius: 20px;
-
-  img {
-    border-radius: 20px;
-  }
-  overflow: hidden;
+  overflow: scroll;
 }
 
-.row {
-  padding-bottom: 10px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
-
-  .fifth {
-    position: relative;
-    top: -157px;
-  }
-}
-
-.item {
-  position: relative;
-  top: -157px;
+.image {
+  padding: 20px;
+  border-radius: 30px;
 }

@@ -10,10 +10,6 @@ import styles from './CatsFotoColection.module.scss';
 const CatsFotoColection: React.FC = () => {
   const data = useSelector((state: any) => state.oneBreed.data);
 
-  // if (data) {
-  //   return <div>Loading ...</div>;
-  // }
-
   return (
     <div className={styles.root}>
       {data.map((breed: any, index: string) => (

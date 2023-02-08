@@ -29,7 +29,7 @@ const RightBreeds: React.FC = () => {
   const [selectBreed, setSelectBreed] = React.useState<any>('');
   const [selectLimit, setSelectLimit] = React.useState<string>('5');
 
-  const activeButtonAsc = React.useRef(false);
+  const activeButtonAsc = React.useRef(true);
   const activeButtonDesc = React.useRef(false);
 
   React.useEffect(() => {

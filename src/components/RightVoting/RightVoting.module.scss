@@ -35,6 +35,13 @@
   flex-direction: column;
 }
 
+.mainImg {
+  width: 636px;
+  height: 369px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
 .likeButtonMenu {
   position: absolute;
   bottom: -40px;
@@ -75,6 +82,8 @@
   width: 640px;
   height: 270px;
   margin: 52px auto 0;
+  overflow: scroll;
+  overflow-x: hidden;
 
   .historyItems {
     display: flex;
@@ -88,10 +97,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 640px;
+    width: 620px;
     height: 60px;
     border-radius: 10px;
     background-color: $color-background;
+
+    .dataTitle {
+      display: flex;
+      align-items: center;
+    }
 
     .time {
       margin: 15px;
@@ -106,8 +120,6 @@
     }
 
     .text {
-      position: relative;
-      left: -80px;
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;

@@ -36,7 +36,9 @@ const limitList = [
 const RightGallery: React.FC = () => {
   return (
     <div className={styles.root}>
-      <Header />
+      <div className={styles.header}>
+        <Header />
+      </div>
       <main className={styles.main}>
         <section className={styles.top}>
           <Link to='/'>

@@ -1,7 +1,7 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import ArrowLeft from '../../components/buttons/ArrowLeft/ArrowLeft';
-import CatsFotoColection from '../../components/CatsFotoColection/CatsFotoColection';
 import Header from '../../components/Header/Header';
 import LeftSection from '../../components/LeftSection/LeftSection';
 import TitleSection from '../../components/TitleSection/TitleSection';
@@ -9,6 +9,8 @@ import TitleSection from '../../components/TitleSection/TitleSection';
 import styles from './Dislike.module.scss';
 
 const Dislike: React.FC = () => {
+  const dislikes = useSelector((state: any) => state.selected.dislikes);
+
   return (
     <div className='container'>
       <div className={styles.root}>
@@ -27,24 +29,17 @@ const Dislike: React.FC = () => {
               </div>
             </section>
 
-            <div className={styles.fotos}>
-              <CatsFotoColection />
-            </div>
-
             <div className={styles.historySection}>
               <div className={styles.historyItems}>
-                <div className={styles.historyItem}>
-                  <div className={styles.time}>22:35</div>
-                  <div className={styles.text}>
-                    Image ID: <span>fQSunHvl8</span> was added to Favourites
+                {dislikes.map((dislike: any) => (
+                  <div key={dislike.id} className={styles.historyItem}>
+                    <div className={styles.time}>{dislike.data}</div>
+                    <div className={styles.text}>
+                      Image ID: <span>{dislike.id}</span> was added to{' '}
+                      <span>{dislike.section}</span>
+                    </div>
                   </div>
-                </div>
-                <div className={styles.historyItem}>
-                  <div className={styles.time}>22:35</div>
-                  <div className={styles.text}>
-                    Image ID: <span>fQSunHvl8</span> was added to Favourites
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>

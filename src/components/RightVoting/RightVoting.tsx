@@ -16,19 +16,30 @@ import heart from '../../assets/icons/heart-red.png';
 import dislike from '../../assets/icons/dislike-green.png';
 import ArrowLeft from '../buttons/ArrowLeft/ArrowLeft';
 import loading from '../../assets/serviсes/loading.png';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  setDislikeItem,
+  setFavouriteItem,
+  setItems,
+  setLikeItem,
+} from '../../redux/slices/selectedItem/slice';
 
 const RightVoting: React.FC = () => {
+  const dispatch = useDispatch();
+  const { items, likes, favourites, dislikes } = useSelector(
+    (state: any) => state.selected
+  );
   const [imageObj, setImageObj] = React.useState<any>({
     height: 164,
     id: '7r4',
     url: loading,
     width: 250,
   });
-  console.log(imageObj, 'right Voting');
 
-  const [likes, setLikes] = React.useState<any>([]);
-
-  console.log(likes, 'like');
+  // const [items, setItems] = React.useState<any>([]);
+  // const [likes, setLikes] = React.useState<any>([]);
+  // const [favourites, setFavourites] = React.useState<any>([]);
+  // const [dislikes, setDislikes] = React.useState<any>([]);
 
   //get one random image
   React.useEffect(() => {
@@ -48,24 +59,59 @@ const RightVoting: React.FC = () => {
       setImageObj(resultDataObj);
     };
     getOneRandomImg();
-  }, [likes]);
+  }, [items, likes, favourites, dislikes]);
 
   const currentData = new Date();
   const currentHours = currentData.getHours();
   const currentMinutes = currentData.getMinutes();
   const myData = currentHours + ':' + currentMinutes;
-  console.log(myData, 'myData');
 
   const handleLike = () => {
-    setLikes([...likes, { ...imageObj, data: myData, section: 'Like' }]);
+    dispatch(
+      setItems([...items, { ...imageObj, data: myData, section: 'Like' }])
+    );
+    // setItems([...items, { ...imageObj, data: myData, section: 'Like' }]);
+    // setLikes([...likes, { ...imageObj, data: myData, section: 'Like' }]);
+
+    dispatch(
+      setLikeItem([...likes, { ...imageObj, data: myData, section: 'Like' }])
+    );
   };
 
   const handleFavourite = () => {
-    setLikes([...likes, { ...imageObj, data: myData, section: 'Favourites' }]);
+    dispatch(
+      setItems([...items, { ...imageObj, data: myData, section: 'Favourites' }])
+    );
+    // setItems([...items, { ...imageObj, data: myData, section: 'Favourites' }]);
+    // setFavourites([
+    //   ...favourites,
+    //   { ...imageObj, data: myData, section: 'Favourites' },
+    // ]);
+
+    dispatch(
+      setFavouriteItem([
+        ...favourites,
+        { ...imageObj, data: myData, section: 'Favourites' },
+      ])
+    );
   };
 
   const handleDislike = () => {
-    setLikes([...likes, { ...imageObj, data: myData, section: 'Dislike' }]);
+    dispatch(
+      setItems([...items, { ...imageObj, data: myData, section: 'Dislike' }])
+    );
+    // setItems([...items, { ...imageObj, data: myData, section: 'Dislike' }]);
+    // setDislikes([
+    //   ...dislikes,
+    //   { ...imageObj, data: myData, section: 'Dislike' },
+    // ]);
+
+    dispatch(
+      setDislikeItem([
+        ...dislikes,
+        { ...imageObj, data: myData, section: 'Dislike' },
+      ])
+    );
   };
 
   return (
@@ -99,7 +145,7 @@ const RightVoting: React.FC = () => {
 
         <div className={styles.historySection}>
           <div className={styles.historyItems}>
-            {likes.map((like: any) => (
+            {items.map((like: any) => (
               <div key={like.id} className={styles.historyItem}>
                 <div className={styles.dataTitle}>
                   <div className={styles.time}>{like.data}</div>

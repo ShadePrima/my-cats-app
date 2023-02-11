@@ -11,6 +11,10 @@
   height: 840px;
 }
 
+.header {
+  width: 680px;
+}
+
 .main {
   margin-top: 10px;
   height: 770px;
@@ -31,6 +35,11 @@
 .fotos {
   height: 460px;
   overflow: hidden;
+}
+
+.historyItems {
+  display: flex;
+  flex-direction: column;
 }
 
 .historyItem {

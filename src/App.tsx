@@ -66,7 +66,6 @@ function App() {
   //     .then((res) => setBreeds(res));
   // }, []);
 
-  // votes
   React.useEffect(() => {
     const API_KEY =
       'live_xbu04NfIXvRe0ID6A8WPyOAD0yE5YMvOKnPgLMeWqeQvBCUkKgzBf5xMcYDFxsRB';

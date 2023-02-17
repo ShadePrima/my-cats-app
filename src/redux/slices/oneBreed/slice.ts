@@ -16,6 +16,7 @@ export const oneBreedSlice = createSlice({
     },
     setKeyBreed(state, action) {
       state.keyBreed = action.payload;
+      console.log(state.keyBreed, 'sliceOneBreed');
     },
     setLimit(state, action) {
       state.limit = action.payload;
